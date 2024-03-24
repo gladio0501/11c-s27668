@@ -45,6 +45,22 @@ print(square_root_of_square)
 # Task 5: Exceptions
 # Handle the case where the end of the range is less than the start in the SquareGenerator class.
 
+class SquareGenerator:
+    def __init__(self, start, end):
+        if end < start:
+            raise ValueError("End of the range must be greater than the start.")
+        self.start = start
+        self.end = end
+
+    def generate_squares(self):
+        return [math.exp2(x) for x in range(self.start, self.end+1)]
+
+try:
+    print("Task 5")
+    square_generator = SquareGenerator(10, 1)
+except ValueError as e:
+    print(e)
+
 
 # Task 6: Modules
 # Extract the SquareGenerator class into a separate module named square_generator.py.
