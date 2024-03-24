@@ -74,11 +74,12 @@ print("Task 6 done but commented out")
 
 # Task 7: Packages
 # Transform the square_generator module into a package by adding an empty __init__.py file and organize it accordingly.
-from Square_gen_package import SquareGenerator as SG
-square_generator2 = SG.SquareGenerator()
-list_from_class = square_generator2.generate_squares(1,10)
-print("Task 7")
-print(list_from_class)
+
+# from Square_gen_package import SquareGenerator as SG
+# square_generator2 = SG.SquareGenerator()
+# list_from_class = square_generator2.generate_squares(1,10)
+print("Task 7 done but commented out")
+# print(list_from_class)
 
 # Task 8: Inheritance
 # Create a subclass called CubicGenerator that inherits from the SquareGenerator class. Modify the CubicGenerator to generate cubes instead of squares.
@@ -95,23 +96,35 @@ print("Task 8 done but commented out")
 
 # Task 9: Function Overriding
 # Override the square generation method in the Cubic Generator class to generate squares with a check to see if the start of the range is less than the end, if not return an Exceptions
+# class CubicGenerator(SG.SquareGenerator):
+#     def generate_squares(self, start, end):
+#         if end < start:
+#             raise ValueError("End of the range must be greater than the start.")
+#         return [math.pow(x, 2) for x in range(start, end + 1)]
+#
+# cubic_generator = CubicGenerator()
+print("Task 9 done but commented out")
+# try:
+#     list_from_class = cubic_generator.generate_squares(10, 1)
+# except ValueError as e:
+#     print(e)
+
+
+# Task 10: Abstract Elements
+# Convert the SquareGenerator class into an abstract base class (ABC) using the abc module, making the generate_squares method abstract. Ensure that the CubicGenerator class implements this abstract method.
+import Square_gen_package.SquareGenerator as SG
 class CubicGenerator(SG.SquareGenerator):
     def generate_squares(self, start, end):
         if end < start:
             raise ValueError("End of the range must be greater than the start.")
         return [math.pow(x, 2) for x in range(start, end + 1)]
 
+print("Task 10")
 cubic_generator = CubicGenerator()
-print("Task 9")
 try:
-    list_from_class = cubic_generator.generate_squares(10, 1)
+    list_from_class = cubic_generator.generate_squares(1,10)
+    print(list_from_class)
 except ValueError as e:
     print(e)
-
-
-# Task 10: Abstract Elements
-# Convert the SquareGenerator class into an abstract base class (ABC) using the abc module, making the generate_squares method abstract. Ensure that the CubicGenerator class implements this abstract method.
-
-
 # Task 11:
 # The result of the assignment should be a link to a pull request.

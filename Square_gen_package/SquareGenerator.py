@@ -1,5 +1,9 @@
 import math
-class SquareGenerator:
+from abc import ABC, abstractmethod
 
+
+class SquareGenerator(ABC):
+
+    @abstractmethod
     def generate_squares(self,start, end):
-        return [math.pow(x,2) for x in range(start, end+1)]
+        pass
