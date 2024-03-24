@@ -36,6 +36,11 @@ print(list_from_class)
 # Task 4: Libraries
 # Utilize the math library to calculate the square root of each number in the generated list from the previous task.
 
+import math
+
+square_root_of_square = [math.sqrt(x) for x in list_from_class]
+print("Task 4")
+print(square_root_of_square)
 
 # Task 5: Exceptions
 # Handle the case where the end of the range is less than the start in the SquareGenerator class.
