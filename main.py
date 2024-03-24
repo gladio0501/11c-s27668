@@ -69,7 +69,7 @@ except ValueError as e:
 #
 # square_generator1 = SG.SquareGenerator()
 # list_from_class = square_generator1.generate_squares(1,10)
-# print("Task 6")
+print("Task 6 done but commented out")
 # print(list_from_class)
 
 # Task 7: Packages
@@ -82,7 +82,16 @@ print(list_from_class)
 
 # Task 8: Inheritance
 # Create a subclass called CubicGenerator that inherits from the SquareGenerator class. Modify the CubicGenerator to generate cubes instead of squares.
+class CubicGenerator(SG.SquareGenerator):
+    def generate_cubes(self, start, end):
+        if end < start:
+            raise ValueError("End of the range must be greater than the start.")
+        return [math.pow(x, 3) for x in range(start, end + 1)]
 
+cubic_generator = CubicGenerator()
+list_from_class = cubic_generator.generate_cubes(1,10)
+print("Task 8")
+print(list_from_class)
 
 # Task 9: Function Overriding
 # Override the square generation method in the Cubic Generator class to generate squares with a check to see if the start of the range is less than the end, if not return an Exceptions
