@@ -9,7 +9,10 @@ print("Task 1")
 print(newlist)
 # Task 2: Functions
 # Expand the previous program by defining a function that takes a range of numbers as input and returns a list of squares for that range.e_squares(start, end))
-
+def generate_squares(start, end):
+    return [x**2 for x in range(start, end+1)]
+print("Task 2")
+print(generate_squares(1, 10))
 # Task 3: Classes
 # Create a class called SquareGenerator that has a method to generate squares for a given range of numbers.
 
