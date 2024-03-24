@@ -4,18 +4,34 @@
 
 # Task 1: List Comprehensions
 # Write a Python program that generates a list of squares of numbers from 1 to 10 using list comprehensions.ares)
+
 newlist = [x**2 for x in range(1, 11)]
 print("Task 1")
 print(newlist)
+
 # Task 2: Functions
 # Expand the previous program by defining a function that takes a range of numbers as input and returns a list of squares for that range.e_squares(start, end))
+
 def generate_squares(start, end):
     return [x**2 for x in range(start, end+1)]
 print("Task 2")
 print(generate_squares(1, 10))
+
 # Task 3: Classes
 # Create a class called SquareGenerator that has a method to generate squares for a given range of numbers.
 
+class SquareGenerator:
+    def __init__(self, start, end):
+        self.start = start
+        self.end = end
+
+    def generate_squares(self):
+        return [x**2 for x in range(self.start, self.end+1)]
+
+square_generator = SquareGenerator(1, 10)
+list_from_class = square_generator.generate_squares()
+print("Task 3")
+print(list_from_class)
 
 # Task 4: Libraries
 # Utilize the math library to calculate the square root of each number in the generated list from the previous task.
