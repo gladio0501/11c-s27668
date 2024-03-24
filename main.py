@@ -65,16 +65,20 @@ except ValueError as e:
 # Task 6: Modules
 # Extract the SquareGenerator class into a separate module named square_generator.py.
 
-import SquareGenerator as SG
-
-square_generator1 = SG.SquareGenerator()
-list_from_class = square_generator1.generate_squares(1,10)
-print("Task 6")
-print(list_from_class)
+# import SquareGenerator as SG
+#
+# square_generator1 = SG.SquareGenerator()
+# list_from_class = square_generator1.generate_squares(1,10)
+# print("Task 6")
+# print(list_from_class)
 
 # Task 7: Packages
 # Transform the square_generator module into a package by adding an empty __init__.py file and organize it accordingly.
-
+from Square_gen_package import SquareGenerator as SG
+square_generator2 = SG.SquareGenerator()
+list_from_class = square_generator2.generate_squares(1,10)
+print("Task 7")
+print(list_from_class)
 
 # Task 8: Inheritance
 # Create a subclass called CubicGenerator that inherits from the SquareGenerator class. Modify the CubicGenerator to generate cubes instead of squares.
